@@ -17,7 +17,7 @@ function Signin({isAuthenticated, setIsAuthenticated}) {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://52.86.102.36:3001/api/auth/signin', {username, password});
+      const response = await axios.post('http://lutskiy-dmytro-blue-green-lb-1561781281.us-east-1.elb.amazonaws.com/api/auth/signin', {username, password});
       sessionStorage.setItem('token', response.data.token);
       sessionStorage.setItem('name', response.data.username);
       setIsAuthenticated(true);
